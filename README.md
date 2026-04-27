@@ -1,5 +1,7 @@
 # Generative Quantum Machine Learning via QuDDPM
 
+[![Open in molab](https://molab.marimo.io/molab-shield.svg)](https://molab.marimo.io/notebooks/nb_yVvwf4fXrQmjRvrcSS4K7D)
+
 This project implements and extends the research presented in the paper [**"Generative Quantum Machine Learning via Denoising Diffusion Probabilistic Models"**](https://www.alphaxiv.org/abs/2310.05866) (Zhang et al.). It was developed for the **Bring Research to Life: molab Notebook Competition**.
 
 ## Overview
