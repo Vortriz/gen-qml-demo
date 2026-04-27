@@ -147,7 +147,7 @@ def _():
             This consists of $T$ steps, where at each step $t$ a random unitary $U_i^{(t)}$ is applied to each state $i$ in the ensemble, which scrambles them. After $T$ steps, the states are completely scrambled and form a Haar random ensemble.
             """),
             mo.image(
-                src="assets/noising-cluster-demo.png",
+                src=mo.notebook_location() / "assets" / "noising-cluster-demo.png",
                 caption="Scrambling m=1000 states sampled from the clustered distribution over T=20 steps, as shown on the Bloch sphere.",
             ),
             mo.md(r"""
@@ -160,8 +160,8 @@ def _():
 
 @app.cell(hide_code=True)
 def _():
-    _forward_circuit = mo.image(src="assets/forward-circuit.svg")
-    _qsc_block = mo.image(src="assets/qsc-block.svg")
+    _forward_circuit = mo.image(src=mo.notebook_location() / "assets" / "forward-circuit.svg")
+    _qsc_block = mo.image(src= mo.notebook_location() / "assets" / "qsc-block.svg")
 
     _fast_scrambling_details = mo.md(f"""
     This is what the forward scrambling circuit looks like:
