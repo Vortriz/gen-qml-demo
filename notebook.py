@@ -286,7 +286,7 @@ def _():
 @app.cell(hide_code=True)
 def _():
     epochs_ui = mo.ui.number(
-        start=0, stop=1000, step=50, value=400, label="Epochs per Step"
+        start=0, stop=1000, step=50, value=600, label="Epochs per Step"
     )
     layers_ui = mo.ui.slider(
         start=2, stop=10, step=1, value=4, show_value=True, label="PQC Layers"
@@ -341,8 +341,6 @@ def _(
 def _():
     mo.md(r"""
     ### Trained model
-
-    The model was trained. Hit the play button to see how the trained circuits perform in the reverse process!
     """)
     return
 
@@ -371,10 +369,10 @@ def _(model):
 def _(backward_slider):
     mo.vstack(
         [
-            mo.md("Timestep $t$"),
-            backward_slider,
+            mo.md("The model was trained. Hit the play button to see how the trained circuits perform in the reverse process!"),
+            mo.md("Timestep $t$").center(),
+            backward_slider.center(),
         ],
-        align="center",
     )
     return
 
@@ -538,10 +536,13 @@ def _(improved_eval, standard_eval):
 
 
 @app.cell(hide_code=True)
-def _():
-    mo.md("""
-    You can see that the improved model converged much faster and produces a much better ensemble with the same number of parameters, compared to the standard model which is struggling with the constrained set of parameters.
-    """)
+def _(compare_button):
+    mo.stop(
+        not compare_button.value,
+        mo.md("""
+        You can see that the improved model converged much faster and produces a much better ensemble with the same number of parameters, compared to the standard model which is struggling with the constrained set of parameters.
+        """)
+    )
     return
 
 
