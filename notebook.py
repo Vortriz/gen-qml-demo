@@ -1,3 +1,18 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "marimo>=0.23.2",
+#     "matplotlib>=3.10.9",
+#     "numpy>=2.4.4",
+#     "pot[backend-torch]>=0.9.6.post1",
+#     "qutip>=5.2.3",
+#     "scipy>=1.17.1",
+#     "tensorcircuit-ng>=1.6.0",
+#     "torch>=2.11.0",
+#     "wigglystuff>=0.3.5",
+# ]
+# ///
+
 import marimo
 
 __generated_with = "0.23.3"
